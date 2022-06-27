@@ -9,6 +9,6 @@ const start = debounce(() => {
 }, 100);
 
 chokidar.watch('.')
-    .on('add', () => console.log('FILE ADDED'))
+    .on('add', start)
     .on('change', () => console.log('FILE CHANGED'))
     .on('unlink', () => console.log('FILE UNLINKED'));
